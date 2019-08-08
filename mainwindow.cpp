@@ -21,7 +21,7 @@ MainWindow::MainWindow(QWidget *parent) :
         this->resize(1100,620);
     #endif
 #endif
-    setWindowFlags(this->windowFlags()&~(Qt::WindowMaximizeButtonHint));//禁止最大化
+    setWindowFlags(this->windowFlags()&~(Qt::WindowMaximizeButtonHint));// 禁止最大化
 }
 
 MainWindow::~MainWindow()

@@ -10,17 +10,18 @@ MainWindow::MainWindow(QWidget *parent) :
     mHelper::FormInCenter(this);
     this->initWnd();
 #ifdef Q_OS_WIN
-     this->setWindowTitle(QString("串口助手"));
-     this->resize(1100,620);
+     this->setWindowTitle(QString("SerialPort"));
+     this->resize(960,500);
 #else
      #ifdef Q_OS_LINUX
-         this->setWindowTitle(QString("串口助手"));
-         this->resize(1300,750);
+         this->setWindowTitle(QString("SerialPort"));
+         this->resize(1200,700);
     #else
         this->setWindowTitle(QString("串口助手(macOS)"));
         this->resize(1100,620);
     #endif
 #endif
+    setWindowFlags(this->windowFlags()&~(Qt::WindowMaximizeButtonHint));//禁止最大化
 }
 
 MainWindow::~MainWindow()
@@ -78,7 +79,10 @@ void MainWindow::initWnd()
     connect(enumerator, SIGNAL(deviceRemoved(QextPortInfo)), SLOT(onPortAddedOrRemoved()));
 
     foreach (QextPortInfo info, QextSerialEnumerator::getPorts())
-        comList.append(info.portName);
+    {
+        if(info.portName!=nullptr)
+            comList.append(info.portName);
+    }
 
     ui->cboxPortName->addItems(comList);
     ui->cboxPortName->setCurrentIndex(0);

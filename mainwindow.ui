@@ -40,7 +40,7 @@
        <item>
         <widget class="QGroupBox" name="gbox1">
          <property name="title">
-          <string>串口参数设置 ：</string>
+          <string>串口设置 ：</string>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout">
           <property name="leftMargin">

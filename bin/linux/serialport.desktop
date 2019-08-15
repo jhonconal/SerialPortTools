@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=SerialPort
+Exec=SerialPort
+Icon=/usr/share/icons/hicolor/scalable/apps/SerialPort.png
+Comment=Linux Serial Port Assistant
+Terminal=false
+Categories=Utility;Application;

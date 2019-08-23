@@ -8,7 +8,7 @@ QT       += core gui widgets multimedia
 
 include(./src/qextserialport.pri)
 
-TARGET = SerialPortTools
+TARGET = SerialPort
 TEMPLATE = app
 
 

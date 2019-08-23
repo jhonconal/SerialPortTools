@@ -311,6 +311,9 @@ void MainWindow::WriteMyCom()
         ui->txtSend->setCurrentIndex(-1);
         ui->txtSend->setFocus();
     }
+    else {
+        ui->txtSend->addItem(str);
+    }
 }
 
 void MainWindow::SaveMyCom()
@@ -468,6 +471,11 @@ void MainWindow::on_btnStopShow_clicked()
 void MainWindow::on_btnClearAll_clicked()
 {    
     ui->txtDataHex->clear();
+    //清空数据时如果勾选IsAutoClear则清空txSend保留的记录
+    if(IsAutoClear)
+    {
+        ui->txtSend->clear();
+    }
 }
 
 void MainWindow::on_btnSend_clicked()

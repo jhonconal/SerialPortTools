@@ -312,6 +312,11 @@ void MainWindow::WriteMyCom()
         ui->txtSend->setFocus();
     }
     else {
+        for(int i=0;i< ui->txtSend->count() ;i++)
+        {
+               if(ui->txtSend->itemText(i) == str)
+                   return;
+        }
         ui->txtSend->addItem(str);
     }
 }

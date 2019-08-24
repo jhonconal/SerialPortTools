@@ -344,8 +344,7 @@
              <bool>false</bool>
             </property>
             <property name="styleSheet">
-             <string notr="true">background-color:rgb(64, 65, 66);
-font: 14pt &quot;宋体&quot;;
+             <string notr="true">font: 14pt &quot;宋体&quot;;
 color: rgb(0, 120, 215);</string>
             </property>
             <property name="frameShape">

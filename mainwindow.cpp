@@ -68,15 +68,15 @@ void MainWindow::initWnd()
 
 #ifdef Q_OS_MACOS
     ui->txtSend->setStyleSheet("QComboBox{min-height: 30px;min-width: 120px;font-size:18px;"
-                                "color:rgb(0, 120, 215);; border-radius: 3px; padding: 1px 5px 1px 3px;	font: 75 15pt \"Times\";} "
+                                "color:rgb(0, 120, 215); border-radius: 3px; padding: 1px 5px 1px 3px;	font: 75 15pt \"Times\";} "
                                 "QComboBox::drop-down{width: 10px;background-color: rgb(0, 105, 217,150) }"
                                 "QComboBox QAbstractItemView{background-color: white;color:gray;font-size:15px;}"
                                 "QComboBox QAbstractItemView:item{min-height: 30px; min-width: 120px; }");
 #else
-    ui->txtSend->setStyleSheet("QComboBox{min-height: 30px;min-width: 120px;background-color: rgb(75,75,75);font-size:18px;"
-                                "color: white; border-radius: 3px; padding: 1px 5px 1px 3px;	font: 75 15pt \"Times\";} "
+    ui->txtSend->setStyleSheet("QComboBox{min-height: 30px;min-width: 120px;font-size:18px;"
+                                "color: rgb(0, 120, 215); border-radius: 3px; padding: 1px 5px 1px 3px;	font: 75 15pt \"Times\";} "
                                 "QComboBox::drop-down{width: 10px;background-color: rgb(0, 105, 217,150) }"
-                                "QComboBox QAbstractItemView{background-color: rgb(255,255,255);color:black;font-size:15px;}"
+                                "QComboBox QAbstractItemView{background-color: white;color:gray;font-size:15px;}"
                                 "QComboBox QAbstractItemView:item{min-height: 30px; min-width: 120px; }");
 
 #endif

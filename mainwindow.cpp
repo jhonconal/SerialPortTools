@@ -15,7 +15,8 @@ MainWindow::MainWindow(QWidget *parent) :
 #else
      #ifdef Q_OS_LINUX
          this->setWindowTitle(QString("SerialPort"));
-         this->resize(1200,700);
+         this->setMaximumSize(1100,620);
+         this->setMinimumSize(1100,620);
     #else
         this->setWindowTitle(QString("串口助手(macOS)"));
         this->resize(1100,620);
